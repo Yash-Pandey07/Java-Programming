@@ -14,14 +14,27 @@ public class Main {
 //            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
 //            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
 //            System.out.println("i = " + i);
-    Basic();
 //        }
-    Array();
-    set();
-    ArrayList();
-    Map();
-    Pratice();
 
+//    Basic();
+//    Array();
+//    set();
+//    ArrayList();
+//    Map();
+//    Pratice();
+    Objects1();
+
+    }
+
+    private static void Objects1() {
+        class Student{
+            int id;
+            String name;
+        }
+
+        Student s1=new Student();
+        System.out.println(s1.id);
+        System.out.println(s1.name);
     }
 
     private static void Basic() {
