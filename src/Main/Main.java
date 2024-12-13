@@ -1,9 +1,8 @@
 package Main;
 
 import Main.Animal.Animal;
-import Main.Animal.PrivateClass;
 
-import java.awt.*;
+import java.lang.reflect.Method;
 import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -21,6 +20,7 @@ public class Main {
 //        }
 
 //    Basic();
+//        Loops();
 //    Array();
 //    set();
 //    ArrayList();
@@ -33,12 +33,70 @@ public class Main {
 //    Rectangle1();               //Object and Class Example: Rectangle
 //    Account();                  //Real World Example: Account
 //        ClassAnimal();
-        PrivateClass();
+//        PrivateClass();
+        PrivateClass2();
 
     }
 
+    private static void PrivateClass2() {
+        try {
+            Class<?> c = Class.forName("Main.PrivateClass2");
+            Object o = c.getDeclaredConstructor().newInstance();
+            Method m = c.getDeclaredMethod("display");
+            m.setAccessible(true);
+            m.invoke(o);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private static void Loops() {
+
+        Random randomNumber = new Random(1);
+        //If-Else Statements
+        int number = randomNumber.nextInt();
+        System.out.println("Number is : " + number);
+        if (number > 0) {
+            System.out.println("Positive number");
+        } else {
+            System.out.println("Negative number");
+        }
+
+        //For Loop
+        for (int i = 0; i < 5; i++) {
+            System.out.println("i = " + i);
+        }
+
+        //Switch Statement
+        int day = randomNumber.nextInt(7);
+        System.out.println("Day number is : " + day);
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+            default:
+                System.out.println("Fun day ,  SUNDAY !");
+
+        }
+    }
+
     private static void PrivateClass() {
-        PrivateClass.OuterClass outer = new PrivateClass.OuterClass();
+        PrivateClass outer = new PrivateClass();
         outer.callInnerPrivateMethod();
     }
 
@@ -240,6 +298,13 @@ public class Main {
 
         //Conditions and Booleans
         int x = 3, y = 7, z = 9;
+
+        //data types
+        int age = 25;
+        char grade = 'A';
+        float salary = 5000.50f;
+        boolean isJavaFun = true;
+
     }
 
     private static void Array() {

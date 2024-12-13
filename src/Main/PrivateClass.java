@@ -1,7 +1,6 @@
-package Main.Animal;
+package Main;
 
 public class PrivateClass {
-    public static class OuterClass {
         private class InnerClass {
             private void privateMethod() {
                 System.out.println("Private method called!");
@@ -12,5 +11,4 @@ public class PrivateClass {
             InnerClass inner = new InnerClass();
             inner.privateMethod();
         }
-    }
 }
