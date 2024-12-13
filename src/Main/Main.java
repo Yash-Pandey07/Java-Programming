@@ -1,5 +1,8 @@
 package Main;
 
+import Main.Animal.Animal;
+import Main.Animal.PrivateClass;
+
 import java.awt.*;
 import java.util.*;
 
@@ -23,48 +26,71 @@ public class Main {
 //    ArrayList();
 //    Map();
 //    Practice();
-//    Objects1();               //Initialization through Reference Variable
-//    Objects2();               //Initialization through Method
-//         Objects3();               //Initialization through a Constructor
-//         Employee();             //Object and Class Example: Employee
-//         Rectangle1();                           //Object and Class Example: Rectangle
-            Account();                  //Real World Example: Account
+//    Objects1();                 //Initialization through Reference Variable
+//    Objects2();                 //Initialization through Method
+//    Objects3();                 //Initialization through a Constructor
+//    Employee();                 //Object and Class Example: Employee
+//    Rectangle1();               //Object and Class Example: Rectangle
+//    Account();                  //Real World Example: Account
+//        ClassAnimal();
+        PrivateClass();
+
+    }
+
+    private static void PrivateClass() {
+        PrivateClass.OuterClass outer = new PrivateClass.OuterClass();
+        outer.callInnerPrivateMethod();
+    }
+
+    private static void ClassAnimal() {
+        Animal animal1 = new Animal("Bhaww", 5);
+        animal1.speak();
 
 
     }
+
     private static void Account() {
-        class Account{
+        class Account {
             int acc_no;
             String name;
             float amount;
+
             //Method to initialize object
-            void insert(int a,String n,float amt){
-                acc_no=a;
-                name=n;
-                amount=amt;
+            void insert(int a, String n, float amt) {
+                acc_no = a;
+                name = n;
+                amount = amt;
             }
+
             //deposit method
-            void deposit(float amt){
-                amount=amount+amt;
-                System.out.println(amt+" deposited");
+            void deposit(float amt) {
+                amount = amount + amt;
+                System.out.println(amt + " deposited");
             }
+
             //withdraw method
-            void withdraw(float amt){
-                if(amount<amt){
+            void withdraw(float amt) {
+                if (amount < amt) {
                     System.out.println("Insufficient Balance");
-                }else{
-                    amount=amount-amt;
-                    System.out.println(amt+" withdrawn");
+                } else {
+                    amount = amount - amt;
+                    System.out.println(amt + " withdrawn");
                 }
             }
+
             //method to check the balance of the account
-            void checkBalance(){System.out.println("Balance is: "+amount);}
+            void checkBalance() {
+                System.out.println("Balance is: " + amount);
+            }
+
             //method to display the values of an object
-            void display(){System.out.println("acc no : "+acc_no+", name : "+name+", amount : "+amount);}
+            void display() {
+                System.out.println("acc no : " + acc_no + ", name : " + name + ", amount : " + amount);
+            }
         }
 
-        Account a1=new Account();
-        a1.insert(832345,"Ankit",1000);
+        Account a1 = new Account();
+        a1.insert(832345, "Ankit", 1000);
         a1.display();
         a1.checkBalance();
         a1.deposit(40000);
@@ -74,42 +100,50 @@ public class Main {
     }
 
     private static void Rectangle1() {
-        class Rectangle{
+        class Rectangle {
             int length;
             int width;
-            void insert(int l, int w){
-                length=l;
-                width=w;
+
+            void insert(int l, int w) {
+                length = l;
+                width = w;
             }
-            void calculateArea(){System.out.println(length*width);}
+
+            void calculateArea() {
+                System.out.println(length * width);
+            }
         }
-        Rectangle r1=new Rectangle();
-        Rectangle r2=new Rectangle();
-        r1.insert(11,5);
-        r2.insert(3,15);
+        Rectangle r1 = new Rectangle();
+        Rectangle r2 = new Rectangle();
+        r1.insert(11, 5);
+        r2.insert(3, 15);
         r1.calculateArea();
         r2.calculateArea();
     }
 
     private static void Employee() {
         //Object and Class Example: Employee
-        class Employee{
+        class Employee {
             int id;
             String name;
             float salary;
+
             void insert(int i, String n, float s) {
-                id=i;
-                name=n;
-                salary=s;
+                id = i;
+                name = n;
+                salary = s;
             }
-            void display(){System.out.println(id+" "+name+" "+salary);}
+
+            void display() {
+                System.out.println(id + " " + name + " " + salary);
+            }
         }
         Employee e1 = new Employee();
-        Employee e2=  new Employee();
-        Employee e3=  new Employee();
-        e1.insert(101, "Ajeet",45900);
-        e2.insert(102,"Raul",256700);
-        e3.insert(103,"Nakul",664500);
+        Employee e2 = new Employee();
+        Employee e3 = new Employee();
+        e1.insert(101, "Ajeet", 45900);
+        e2.insert(102, "Raul", 256700);
+        e3.insert(103, "Nakul", 664500);
         e1.salary = 45000;
         e1.display();
         e2.display();
