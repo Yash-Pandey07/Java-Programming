@@ -2,6 +2,7 @@ package Main;
 
 import Main.Animal.Animal;
 
+import java.lang.management.GarbageCollectorMXBean;
 import java.lang.reflect.Method;
 import java.util.*;
 
@@ -34,8 +35,20 @@ public class Main {
 //    Account();                  //Real World Example: Account
 //        ClassAnimal();
 //        PrivateClass();
-        PrivateClass2();
+//        PrivateClass2();
+        GarbageCollector();
 
+
+    }
+
+    public void finalize(){System.out.println("object is garbage collected");}
+
+    private static void GarbageCollector() {
+        GarbageEx g1 = new GarbageEx();
+        GarbageEx g2 = new GarbageEx();
+        g1 = null;
+        g2 = null;
+        System.gc();
     }
 
     private static void PrivateClass2() {
