@@ -37,11 +37,35 @@ public class Main {
 //        PrivateClass();
 //        PrivateClass2();
         GarbageCollector();
+        StringInmutable();
+
 
 
     }
 
-    public void finalize(){System.out.println("object is garbage collected");}
+    private static void StringInmutable(){
+
+        int a =1;
+        int b= 1;
+        b=2;
+//        int hashCode = System.identityHashCode(b);
+//        int hashCode2 = System.identityHashCode(a);
+//        String hexAddress = Integer.toHexString(hashCode);
+//        String hexAddress2 = Integer.toHexString(hashCode2);
+//        System.out.println("Memory address: " + hexAddress);
+//        System.out.println("Memory address2 : " + hexAddress2);
+
+        String A = "Yash";
+        String B = "Yash";
+        B = "Sumit";
+        int hashCode = System.identityHashCode(A);
+        int hashCode2 = System.identityHashCode(B);
+        String hexAddress = Integer.toHexString(hashCode);
+        String hexAddress2 = Integer.toHexString(hashCode2);
+        System.out.println("Memory address: " + hexAddress);
+        System.out.println("Memory address2 : " + hexAddress2);
+    }
+//    public void finalize(){System.out.println("object is garbage collected");}
 
     private static void GarbageCollector() {
         GarbageEx g1 = new GarbageEx();
