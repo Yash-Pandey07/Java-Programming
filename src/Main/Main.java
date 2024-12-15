@@ -9,7 +9,7 @@ import java.util.*;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+    public static void main (String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
 //        System.out.printf("Hello and welcome!");
@@ -36,12 +36,27 @@ public class Main {
 //        ClassAnimal();
 //        PrivateClass();
 //        PrivateClass2();
-        GarbageCollector();
-        StringInmutable();
+//        GarbageCollector();
+//        StringInmutable();
 
 
+        //method to print a varibale
+
+//        int valueToPrint = newCLass.printMenthod(5);
+//        System.out.println(valueToPrint);
+//    newCLass o = new newCLass() ;
+//    System.out.println(o.printMenthod(5));
 
     }
+
+    class newCLass {
+
+        private int printMenthod(int varibleA){
+            return varibleA ;
+        }
+    }
+
+
 
     private static void StringInmutable(){
 
