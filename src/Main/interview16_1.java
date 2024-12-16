@@ -7,10 +7,12 @@ public class interview16_1 {
 
         int[] result = printMethod(NewArray);
         int size = result.length;
-        for (int j = 0; j < size; j++) {
-            System.out.println(result[j]);
-        }
+//        for (int j = 0; j < size; j++) {
+//            System.out.println(result[j]);
+//        }
 
+        Integer s = 5;
+        System.out.println(s.getClass().getSimpleName());
     }
     public static int[] printMethod(int[] NewArray){
         for(int i=0;i<NewArray.length/2;i++){
@@ -20,4 +22,8 @@ public class interview16_1 {
         }
         return NewArray;
     }
+
+
+//    String AA ="Gagan";
+//    AA = "Sagar";
 }
