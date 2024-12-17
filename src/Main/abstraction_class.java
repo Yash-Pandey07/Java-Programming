@@ -40,8 +40,16 @@ public abstract class abstraction_class {
 
         //Abstract Class Having Constructor, Data Member and Methods
         Bike obj = new Honda();
-        obj.run();
-        obj.changeGear();
+//        obj.run();
+//        obj.changeGear();
+
+        //another eg
+
+        A a=new M();
+        a.a();
+        a.b();
+        a.c();
+        a.d();
 
     }
 
@@ -65,4 +73,23 @@ abstract class Bike{
 //Creating a Child class which inherits Abstract class
 class Honda extends Bike{
     void run(){System.out.println("running safely..");}
+}
+
+
+//Another eg
+interface A{
+    void a();
+    void b();
+    void c();
+    void d();
+}
+
+abstract class B implements A{
+    public void c(){System.out.println("I am c");}
+}
+
+class M extends B{
+    public void a(){System.out.println("I am a");}
+    public void b(){System.out.println("I am b");}
+    public void d(){System.out.println("I am d");}
 }
