@@ -1,4 +1,4 @@
-////create a new method implementing switch case which can determine the type of variable
+////create a new method implementing switch case which can determine the type of variable  = DOne
 //
 ////[2,3,6,4,8,5,2,1,6]
 ////key =7
