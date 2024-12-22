@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TwoSum {
     public static void main(String[] arg) {
-        int[] numsArray = {2, 3, 6, 4, 8, 5, 2, 1, 6};
+        int[] numsArray = {2, 3, 6, 4, 8, 5, 2, 1, 6, 3 ,4};
         int target = 7;
 //        int[] pair = new int[2];
 //        pair = arrPair(numsArray , target);
@@ -71,7 +71,7 @@ public class TwoSum {
 //                result.add(new int[]{moreNeeded, num});           //return the exact number
 //            }
 //            mpp.put(numsArray[i], i);
-            //We only add numbers to the HashMap if they haven't been used yet.
+//            We only add numbers to the HashMap if they haven't been used yet.
             if (mpp.containsKey(moreNeeded) && mpp.get(moreNeeded) != -1) {
                 result.add(new int[]{moreNeeded, num});
                 // Mark the numbers as used
@@ -81,6 +81,6 @@ public class TwoSum {
                 mpp.put(num, i);
             }
         }
-        return result;
+    return result;
     }
 }
