@@ -4,21 +4,27 @@ public class StaticMethods {
 
     public static void main(String[] args) {
 
-//        Student a = new Student("A");
-//        Student b = new Student("B");
-//        Student c = new Student("c");
+        Student a = new Student("A");
+        Student b = new Student("B");
+        Student c = new Student("C");
 
 //        System.out.println(b.toString());
 //        System.out.println(c.toString());
 //        System.out.println(b.compareTo(a));
 
+        /*
         if (args.length > 0) {
             System.out.println("First argument: " + args[0]);
         } else {
             System.out.println("No arguments provided.");
         }
+        */
 
-
+        //Interfaces
+        Car ford = new Car();
+        ford.speedUp(50);
+        ford.changeGear(4);
+        ford.display();
     }
 }
 

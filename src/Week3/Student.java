@@ -22,4 +22,8 @@ public class Student implements Comparable<Student>{
 
         return this.name.compareTo(o.name);
     }
+
+    public String toString(){
+        return this.name;
+    }
 }
