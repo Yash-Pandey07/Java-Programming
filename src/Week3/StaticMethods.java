@@ -1,5 +1,9 @@
 package Week3;
 
+import java.util.Arrays;
+import java.util.Random;
+import java.util.logging.Level;
+
 public class StaticMethods {
 
     public static void main(String[] args) {
@@ -24,7 +28,26 @@ public class StaticMethods {
         Car ford = new Car();
         ford.speedUp(50);
         ford.changeGear(4);
-        ford.display();
+//        ford.display();
+//        int min = 1, max = 3, range = max - min + 1;
+//
+//        int rand1 = (int) (Math.random() * range) + min;
+        LevelEnum randomEnum = getRandomEnum(LevelEnum.class);
+//        System.out.println(rand1);
+        LevelEnum lv1 = LevelEnum.High;
+        System.out.println("Lvl 1 = "+lv1);
+        System.out.println("Random ENUM = " + randomEnum);
+
+        LevelEnum[] arr = LevelEnum.values();
+        System.out.print("LevelEnum array = ");
+        System.out.println(Arrays.toString(arr));
+
+    }
+
+    public static <T extends Enum<?>> T getRandomEnum(Class<T> enumClass) {
+        Random random = new Random();
+        int x = random.nextInt(enumClass.getEnumConstants().length);
+        return enumClass.getEnumConstants()[x];
     }
 }
 
