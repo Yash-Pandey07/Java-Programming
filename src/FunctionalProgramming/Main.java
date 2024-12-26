@@ -1,7 +1,9 @@
 package FunctionalProgramming;
 
+import javax.lang.model.type.DeclaredType;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static FunctionalProgramming.Main.Gender.*;
 
@@ -16,7 +18,7 @@ public class Main {
         );
 
 //        Imperative approach
-//        System.out.println("Imperative approach");
+        System.out.println("// Imperative approach");
         List<Person> females = new ArrayList<>();
 
         for (Person person : people) {
@@ -25,17 +27,25 @@ public class Main {
             }
         }
 
-//        for (Person female : females) {
-//            System.out.println(female);
-//        }
+        for (Person female : females) {
+            System.out.println(female);
+        }
+//        Declarative approach
+        System.out.println("// Declarative approach");
 
-//        fun1();
+        people.stream()
+                .filter(person -> FEMALE.equals(person.gender))
+//                .toList()
+                .forEach(System.out::println);
+//        static methods in a class only
+        /*
+        fun1();
         Class2 obj1 = new Class2();
         obj1.fun1();
         obj1.fun2();
         obj1.x = 5;
         System.out.println(obj1.x);
-
+        */
     }
 
     static class Person {
@@ -60,19 +70,21 @@ public class Main {
         MALE, FEMALE;
     }
 
-    static void fun1(){
+    static void fun1() {
         System.out.println("Fun1");
     }
 
 }
-class Class2 {
-    int x , y;
 
-    void fun1(){
+//static methods in a class only
+class Class2 {
+    int x, y;
+
+    void fun1() {
         System.out.println("Fun1");
     }
 
-    void fun2(){
+    void fun2() {
         System.out.println("Fun2");
     }
 }
