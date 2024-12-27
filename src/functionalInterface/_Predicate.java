@@ -15,6 +15,8 @@ public class _Predicate {
         System.out.println("Validate the number and check if it contains 3");
         System.out.println("9131972803 number is valid and it contains 3  = "+ isPhoneNumberValidPredicate.and(isPhoneNumberContains3).test("9131972903"));
         System.out.println("9141972804 number is valid and it contains 3  = "+ isPhoneNumberValidPredicate.and(isPhoneNumberContains3).test("9141972904"));
+        System.out.println("9141972804 number is valid or it contains 3  = "+ isPhoneNumberValidPredicate.or(isPhoneNumberContains3).test("9141972904"));
+
     }
     static boolean isPhoneNumberValid(String phoneNumber){
         return phoneNumber.startsWith("9") && phoneNumber.length() == 10;
@@ -25,4 +27,6 @@ public class _Predicate {
 //    Multiple Predicate can be used all together
     static Predicate<String> isPhoneNumberContains3 = phoneNumber ->
         phoneNumber.contains("3");
+//  BiPredicates
+
 }
