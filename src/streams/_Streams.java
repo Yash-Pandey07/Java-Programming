@@ -2,6 +2,7 @@ package streams;
 
 import java.util.List;
 import java.util.Set;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static streams._Streams.Gender.FEMALE;
@@ -20,19 +21,26 @@ public class _Streams {
                 new Person("Ivan", PREFER_NOT_TO_SAY)
         );
 
-        people.stream()
-//                .map(person -> person.gender)
-                .map(person -> person.name)
-                .mapToInt(String::length)
-//                .collect(Collectors.toSet())
-                .forEach(System.out::println);
+//        people.stream()
+////                .map(person -> person.gender)
+//                .map(person -> person.name)
+//                .mapToInt(String::length)
+////                .collect(Collectors.toSet())
+//                .forEach(System.out::println);
 
         Set<Gender> genders = people.stream()
                 .map(person -> person.gender)
                 .collect(Collectors.toSet());
 
 
-//        System.out.println(genders);
+        Predicate<Person> personPredicate = person -> FEMALE.equals(person.gender);
+
+        boolean containsOnlyFemale = people.stream()
+                .anyMatch(personPredicate);
+
+        System.out.println(containsOnlyFemale);
+
+
     }
 
     static class Person {
