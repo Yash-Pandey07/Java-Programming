@@ -15,3 +15,43 @@
 //// a-4 b-4 c-2 d-2
 //
 ////OOPS concept
+
+29 Dec
+//String
+1) check if the string is panagram or not
+The quick brown fox jumps over the lazy dog
+
+2) check if the string is isomorphic or not
+
+3)
+
+//what are objects in class ?  //missed the keyword blueprint
+// inheritance // missing keyword inherit the property of parent class , or child class can drive the property of parent class
+// interfaces in  java  / multiple inheritance in java is supported by it
+// polymorphism it means many forms , real life eg . using right keywords
+// code each of them with real life eg .
+// run time and compile time polymorphism   //e.g. with race conditions and other egs
+
+// Abstracting  // missing key-words data hiding form user and showing only high level details without exposing the internal BL .
+// when we absract class define a abstract method , it dones't define its own logic or function definition , other the
+other class with inherit the properties of the abstract class .
+
+// abstract class vs abstract methods
+// how data hiding works with coding eg .
+
+// encapsulation vs abstraction difference with code
+
+CLass A  ->> Abstract class  private int a ;
+Class B  ->> Normal class    private int b ;
+
+Class C  --> extends class  A properties
+Class D  ->> extends class  B properties
+in terms of data hiding
+
+// overloading vs overriding
+overloading can the name of the function // overloading we can change the access specifier and parameters , override
+
+function play (int a ){
+    return 1;
+}
+

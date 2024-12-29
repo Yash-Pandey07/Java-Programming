@@ -72,7 +72,7 @@ public class TwoSum {
 //            }
 //            mpp.put(numsArray[i], i);
 //            We only add numbers to the HashMap if they haven't been used yet.
-            if (mpp.containsKey(moreNeeded) && mpp.get(moreNeeded) != -1) {
+            if (mpp.containsKey(moreNeeded) && mpp.get(moreNeeded) != -1) {     //without pre-defined functions on map
                 result.add(new int[]{moreNeeded, num});
                 // Mark the numbers as used
                 mpp.put(moreNeeded, -1);

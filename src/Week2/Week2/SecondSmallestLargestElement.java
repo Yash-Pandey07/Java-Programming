@@ -2,7 +2,7 @@ package Week2.Week2;
 
 public class SecondSmallestLargestElement {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 4, 7, 7, 5};
+        int[] arr = {1, 2, 4, 7, 6, 5};
         int n = arr.length;
         int sS = secondSmallest(arr, n);
         int sL = secondLargest(arr, n);
