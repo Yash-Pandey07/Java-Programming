@@ -50,6 +50,8 @@ in terms of data hiding
 
 // overloading vs overriding
 overloading can the name of the function // overloading we can change the access specifier and parameters , override
+Overloading occurs when two or more methods in the same class have the same name but different parameters (different type, number, or both).
+Overriding occurs when a subclass provides a specific implementation for a method that is already defined in its superclass.
 
 function play (int a ){
     return 1;
