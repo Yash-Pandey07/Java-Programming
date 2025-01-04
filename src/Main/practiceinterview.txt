@@ -26,10 +26,25 @@ The quick brown fox jumps over the lazy dog
 3)
 
 //what are objects in class ?  //missed the keyword blueprint
+Objects are instances of classes that can hold both data and methods to manipulate that data.
+They represent the "blueprint" of real-world entities.
+
 // inheritance // missing keyword inherit the property of parent class , or child class can drive the property of parent class
-// interfaces in  java  / multiple inheritance in java is supported by it
+Inheritance allows a class (child class) to inherit the properties and behaviors of another class (parent class).
+This allows code reusability and hierarchical classification.
+
+// interfaces in  java  / is multiple inheritance in java is supported by it
+Interfaces are a way to achieve abstraction and multiple inheritance in Java.
+They can contain only abstract methods (prior to Java 8) or static/default methods (Java 8 and later).
+
 // polymorphism it means many forms , real life eg . using right keywords
+Polymorphism means "many forms".
+It allows objects to be treated as instances of their parent class rather than their actual class.
+It supports method overloading (compile-time polymorphism) and method overriding (run-time polymorphism).
+
 // code each of them with real life eg .
+
+
 // run time and compile time polymorphism   //e.g. with race conditions and other egs
 
 // Abstracting  // missing key-words data hiding form user and showing only high level details without exposing the internal BL .
