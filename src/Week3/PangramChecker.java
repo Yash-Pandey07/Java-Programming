@@ -10,7 +10,7 @@ public class PangramChecker {
             System.out.println("The string is not Panagram");
         }
     }
-
+//optimise wit hashmap
     public static boolean isPangram(String str) {
         boolean[] mark = new boolean[26];
         int index = 0;
