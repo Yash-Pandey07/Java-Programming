@@ -21,4 +21,6 @@ public class DemoForEach {
 //        values.forEach(c);
         values.forEach(i -> System.out.println(i));
     }
+
+
 }
