@@ -21,5 +21,6 @@ public class Temp1
         // boolean type
         System.out.println(true == true);
 
+
     }
 }
