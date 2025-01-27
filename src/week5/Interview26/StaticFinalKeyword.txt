@@ -1,0 +1,59 @@
+Here’s a concise comparison of `final` and `static` in Java:
+
+| **Aspect**                | **`final`**                                                | **`static`**                                      |
+|---------------------------|-----------------------------------------------------------|--------------------------------------------------|
+| **Definition**            | Used to declare constants, prevent overriding/inheritance, or reassignment. | Used to define class-level variables or methods. |
+| **Applies To**            | Variables, methods, and classes.                          | Variables, methods, blocks, and nested classes.  |
+| **Effect** on Variables   | The value cannot be changed once assigned.                | Shared among all instances of the class.         |
+| **Effect** on Methods     | Prevents the method from being overridden.                | Makes the method belong to the class, not an instance. |
+| **Effect** on Classes     | Prevents the class from being extended (inherited).       | Not applicable to the entire class, but used for nested classes. |
+| **Access**                | Instance-specific (non-static).                           | Shared, accessed using the class name.           |
+| **Memory**                | Stored in object-specific memory.                         | Stored in the class's memory (only one copy exists). |
+
+---
+
+### Example:
+
+#### Using `final`:
+```java
+public class FinalExample {
+    final int x = 10; // Cannot be reassigned
+
+    final void display() {
+        System.out.println("This method cannot be overridden.");
+    }
+}
+
+class Child extends FinalExample {
+    // void display() { } // Compilation error, cannot override a final method
+}
+```
+
+#### Using `static`:
+```java
+public class StaticExample {
+    static int count = 0; // Shared among all instances
+
+    static void displayCount() {
+        System.out.println("Count: " + count);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        StaticExample.count = 5; // Accessed using the class name
+        StaticExample.displayCount(); // Prints: Count: 5
+    }
+}
+```
+
+---
+
+### Key Differences:
+1. **Purpose**:
+   - `final` focuses on immutability (cannot be changed/extended).
+   - `static` focuses on sharing class-level resources.
+
+2. **Usage**:
+   - `final` is for constants, securing methods, and preventing inheritance.
+   - `static` is for class-level variables, methods, and blocks.

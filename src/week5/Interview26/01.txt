@@ -3,6 +3,12 @@ What all data structure are call by value and call by reference
 Difference between final vs static
 primitive data types are called by valur or reference
 
+%
+Primitive data types are **called by value**.
+This means that when you pass a primitive type
+(e.g., `int`, `float`, `bool`) to a method, a copy of the value is passed, and changes to the parameter
+inside the method do not affect the original value.
+%
 
 //topics
 Exceptions Handling
