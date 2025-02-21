@@ -26,24 +26,33 @@ public class StringComparision {
 //        System.out.println(secString);
 
         //String immutable
-        String name4 = "Java";
-        name4.concat(" String");
-        System.out.println(name4);
-
-        StringBuffer name5 = new StringBuffer("Java");
-//        name5.append("Buffer");
+//        String name4 = "Java";
+//        name4.concat(" String");
+//        System.out.println(name4);
+//
+//        StringBuffer name5 = new StringBuffer("Java");
+////        name5.append("Buffer");
+////        System.out.println(name5);
+//
+//        name5.insert(4,"Features");
+//        System.out.println(name5);
+//
+//        name5.replace(0,4,"jAVA");
+//        System.out.println(name5);
+//
+//        name5.delete(4,12);
+//        System.out.println(name5);
+//
+//        name5.reverse();
 //        System.out.println(name5);
 
-        name5.insert(4,"Features");
-        System.out.println(name5);
+        String text1 = "Abcdefg";
+        System.out.println(text1.indexOf('b'));
 
-        name5.replace(0,4,"jAVA");
-        System.out.println(name5);
+        char c1 = 'A';        // c1 is assigned the character 'A', which has an ASCII value of 65
+        float f = c1 + 0.9f;  // f is assigned the value of 65 (from c1) plus 0.9, resulting in 65.9
+        char c2 = (char)f;    // f is cast to a char, so 65.9 is truncated to 65 when converted to an integer
+        System.out.println(c2); // c2, which is 65, is converted back to the character 'A'
 
-        name5.delete(4,12);
-        System.out.println(name5);
-
-        name5.reverse();
-        System.out.println(name5);
     }
 }
