@@ -6,7 +6,7 @@ import java.util.List;
 public class GenerateParentheses {
     public static void main(String[] args) {
         //System.out.println("Hello World");
-        List<String> result = generateParenthesis(3);
+        List<String> result = generateParenthesis(2);
         System.out.println(result);
     }
     public static  List<String> generateParenthesis(int n) {
