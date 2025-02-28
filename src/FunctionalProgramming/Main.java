@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import static FunctionalProgramming.Main.Gender.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         List<Person> people = List.of(
                 new Person("John", MALE),
                 new Person("Mickel", MALE),
